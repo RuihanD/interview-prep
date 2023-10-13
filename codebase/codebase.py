@@ -63,7 +63,7 @@ class Solution:
             curr_round = str(min_time) + ","
             for task in cleared_tasks:
                 curr_round += task.name + ","
-                task.time_remain = max(0, task.time_remain - min_time)
+                task.time_remain = task.time_remain - min_time
                 if task.time_remain > 0:
                     tasks_no_dependency.append(task)
                 else:
